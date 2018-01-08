@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>iconos/ciudad.png</file>
+        <file>iconos/agua.png</file>
+        <file>iconos/bosque.png</file>
+        <file>iconos/ballena.png</file>
+        <file>iconos/desierto.png</file>
+        <file>iconos/lomas.png</file>
+        <file>iconos/mono.png</file>
+        <file>iconos/montana.png</file>
+        <file>iconos/nieve.png</file>
+        <file>iconos/pared.png</file>
+        <file>iconos/playa.png</file>
+        <file>iconos/pueblo.png</file>
+        <file>iconos/super.png</file>
+        <file>iconos/arriba.jpg</file>
+        <file>iconos/abajo.jpg</file>
+        <file>iconos/izquierda.jpg</file>
+        <file>iconos/derecha.jpg</file>
+    </qresource>
+</RCC>
