@@ -646,67 +646,67 @@ QIcon MainWindow::generar_icono(string nombre)
 {
 
     if(nombre=="Ciudad"){
-        QPixmap pixmap("iconos/ciudad.png");
+        QPixmap pixmap(":/iconos/ciudad.png");
         QIcon Icon(pixmap);
         return Icon;
     }
     else if(nombre=="Mar"){
-        QPixmap pixmap("iconos/agua.png");
+        QPixmap pixmap(":/iconos/agua.png");
         QIcon Icon(pixmap);
         return Icon;
     }
     else if(nombre=="Playa"){
-        QPixmap pixmap("iconos/playa.png");
+        QPixmap pixmap(":/iconos/playa.png");
         QIcon Icon(pixmap);
         return Icon;
     }
     else if(nombre=="Desierto"){
-        QPixmap pixmap("iconos/desierto.png");
+        QPixmap pixmap(":/iconos/desierto.png");
         QIcon Icon(pixmap);
         return Icon;
     }
     else if(nombre=="Bosque"){
-        QPixmap pixmap("iconos/bosque.png");
+        QPixmap pixmap(":/iconos/bosque.png");
         QIcon Icon(pixmap);
         return Icon;
     }
     else if(nombre=="Montana"){
-        QPixmap pixmap("iconos/montana.png");
+        QPixmap pixmap(":/iconos/montana.png");
         QIcon Icon(pixmap);
         return Icon;
     }
     else if(nombre=="Pueblo"){
-        QPixmap pixmap("iconos/pueblo.png");
+        QPixmap pixmap(":/iconos/pueblo.png");
         QIcon Icon(pixmap);
         return Icon;
     }
     else if(nombre=="Loma"){
-        QPixmap pixmap("iconos/lomas.png");
+        QPixmap pixmap(":/iconos/lomas.png");
         QIcon Icon(pixmap);
         return Icon;
     }
     else if(nombre=="Nieve"){
-        QPixmap pixmap("iconos/nieve.png");
+        QPixmap pixmap(":/iconos/nieve.png");
         QIcon Icon(pixmap);
         return Icon;
     }
     else if(nombre=="Pared"){
-        QPixmap pixmap("iconos/pared.png");
+        QPixmap pixmap(":/iconos/pared.png");
         QIcon Icon(pixmap);
         return Icon;
     }
     else if(nombre=="Ballena"){
-        QPixmap pixmap("iconos/ballena.png");
+        QPixmap pixmap(":/iconos/ballena.png");
         QIcon Icon(pixmap);
         return Icon;
     }
     else if(nombre=="Mono"){
-        QPixmap pixmap("iconos/mono.png");
+        QPixmap pixmap(":/iconos/mono.png");
         QIcon Icon(pixmap);
         return Icon;
     }
     else if(nombre=="Super"){
-        QPixmap pixmap("iconos/super.png");
+        QPixmap pixmap(":/iconos/super.png");
         QIcon Icon(pixmap);
         return Icon;
     }
@@ -5946,7 +5946,7 @@ void MainWindow::cargar_repetidos()
     }
 }
 
-bool MainWindow::mover(int x1, int y1, int x2, int y2, string nombre)
+void MainWindow::mover(int x1, int y1, int x2, int y2, string nombre)
 {
     switch (x1) {
     case 0:
@@ -11492,7 +11492,7 @@ void MainWindow::primero_mejor()
             }
 
             ordenar_distancia();
-            qDebug()<<QString::fromStdString(pilabac.cordenada);
+          //  qDebug()<<QString::fromStdString(pilabac.cordenada);
 
 
             auxpadre=generar_xy(pilaback[0].cordenada);
@@ -11912,8 +11912,10 @@ void MainWindow::A()
         }
         if(final.x==cordenada.x && final.y==cordenada.y){
             correcto=true;
-            visitas(bpv(auxi.cordenada,auxi.padre),num_visita);
+
+            visitas(pilaback[0],num_visita);
             num_visita++;
+            ant=pilaback[0];
             on_pushButton_3_clicked();
             activo=1;
             QMessageBox msg;

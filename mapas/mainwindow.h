@@ -50,7 +50,7 @@ public:
     void desbloquear_final(coordenada);
     void bloquear_botones();
     void cargar_repetidos();
-    bool mover(int,int,int,int,string);
+    void mover(int,int,int,int,string);
     int num_visita;
     int activo=0;
     int orden=1;
